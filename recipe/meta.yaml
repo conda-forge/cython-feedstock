@@ -1,4 +1,4 @@
-{% set version="0.24" %}
+{% set version="0.24.1" %}
 
 package:
   name: cython
@@ -7,7 +7,7 @@ package:
 source:
   fn: Cython-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/C/Cython/Cython-{{ version }}.tar.gz
-  md5: 14fbc970f4a856845e633cbc09e61048
+  md5: 890b494a12951f1d6228c416a5789554
 
 build:
   number: 0
@@ -46,3 +46,4 @@ extra:
   recipe-maintainers:
     - jakirkham
     - msarahan
+    - ocefpaf
