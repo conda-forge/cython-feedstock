@@ -1,6 +1,6 @@
-{% set name = "Cython" }
+{% set name = "Cython" %}
 {% set version = "0.25" %}
-{% set sha256 = "c651eeec6bdcb57de59527e8765c9d2c4970c56bf96731893df66dda17aba46b" }
+{% set sha256 = "c651eeec6bdcb57de59527e8765c9d2c4970c56bf96731893df66dda17aba46b" %}
 
 package:
   name: {{ name|lower }}
