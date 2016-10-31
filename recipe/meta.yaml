@@ -1,13 +1,15 @@
-{% set version="0.24.1" %}
+{% set name = "Cython" %}
+{% set version = "0.25.1" %}
+{% set sha256 = "e0941455769335ec5afb17dee36dc3833b7edc2ae20a8ed5806c58215e4b6669" %}
 
 package:
-  name: cython
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: Cython-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/C/Cython/Cython-{{ version }}.tar.gz
-  md5: 890b494a12951f1d6228c416a5789554
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
   number: 0
@@ -47,3 +49,4 @@ extra:
     - jakirkham
     - msarahan
     - ocefpaf
+    - synapticarbors
