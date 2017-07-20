@@ -1,4 +1,4 @@
-{% set version="0.25.2" %}
+{% set version="0.26" %}
 
 package:
   name: cython
@@ -7,10 +7,10 @@ package:
 source:
   fn: Cython-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/C/Cython/Cython-{{ version }}.tar.gz
-  sha256: f141d1f9c27a07b5a93f7dc5339472067e2d7140d1c5a9e20112a5665ca60306
+  sha256: 4c24e2c22ddaed624d35229dc5db25049e9e225c6f64f3364326836cad8f2c66
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
   entry_points:
     - cython = Cython.Compiler.Main:setuptools_main
@@ -21,6 +21,7 @@ requirements:
   build:
     - python
     - setuptools
+    - toolchain
   run:
     - python
 
@@ -48,3 +49,4 @@ extra:
     - msarahan
     - ocefpaf
     - synapticarbors
+    - isuruf
