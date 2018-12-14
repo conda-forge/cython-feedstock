@@ -1,4 +1,4 @@
-{% set version = "0.29.1" %}
+{% set version = "0.29.2" %}
 
 package:
   name: cython
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/C/Cython/Cython-{{ version }}.tar.gz
-  sha256: 18ab7646985a97e02cee72e1ddba2e732d4931d4e1732494ff30c5aa084bfb97
+  sha256: 2ac187ff998a95abb7fae452b5178f91e1a713698c9ced89836c94e6b1d3f41e
 
 build:
   number: 1000
