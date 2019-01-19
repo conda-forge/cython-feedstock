@@ -1,4 +1,4 @@
-{% set version = "0.29.2" %}
+{% set version = "0.29.3" %}
 
 package:
   name: cython
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/C/Cython/Cython-{{ version }}.tar.gz
-  sha256: 2ac187ff998a95abb7fae452b5178f91e1a713698c9ced89836c94e6b1d3f41e
+  sha256: d687fb1cd9df28c1515666174c62e54bd894a6a6d0862f89705063cd47739f83
 
 build:
-  number: 1000
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - cython = Cython.Compiler.Main:setuptools_main
