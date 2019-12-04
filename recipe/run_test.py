@@ -21,6 +21,12 @@ print('sys.version: %r' % sys.version)
 print('PATH: %r' % os.environ['PATH'])
 print('CWD: %r' % os.getcwd())
 
+
+from Cython.Build import cythonize
+
+cythonize("fib_cythonize_*.pyx", nthreads=2)
+
+
 from distutils.core import setup
 from distutils.extension import Extension
 from Cython.Distutils import build_ext

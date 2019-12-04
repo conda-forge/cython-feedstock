@@ -33,6 +33,8 @@ test:
     - cython --version
   files:
     - fib.pyx
+    - fib_cythonize_1.pyx
+    - fib_cythonize_2.pyx
 
 about:
   home: http://www.cython.org/
