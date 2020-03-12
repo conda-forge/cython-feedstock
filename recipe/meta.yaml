@@ -9,7 +9,7 @@ source:
   sha256: 60d859e1efa5cc80436d58aecd3718ff2e74b987db0518376046adedba97ac30
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - cython = Cython.Compiler.Main:setuptools_main
