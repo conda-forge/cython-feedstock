@@ -36,7 +36,7 @@ test:
     - runtests.py  # from repo
   commands:
     - cython --version
-    - python -vv -x Debugger runtests.py
+    - python -vv runtests.py
 
 about:
   home: http://www.cython.org/
