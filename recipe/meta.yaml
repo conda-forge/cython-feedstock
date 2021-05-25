@@ -34,10 +34,12 @@ test:
     - fib.pyx      # needed by run_test.py
   source_files:
     - runtests.py  # from repo
-    - tests/       # needed by runtests.py
+    # files below needed by runtests.py
+    - tests/
+    - Cython/Runtime/refnanny.pyx
   commands:
     - cython --version
-    - python -vv runtests.py
+    - python -v runtests.py
 
 about:
   home: http://www.cython.org/
