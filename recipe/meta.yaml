@@ -37,9 +37,11 @@ test:
     # files below needed by runtests.py
     - tests/
     - Cython/Runtime/refnanny.pyx
+    - Demos/embed
   requires:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - numpy
   commands:
     - cython --version
     - python -v runtests.py
