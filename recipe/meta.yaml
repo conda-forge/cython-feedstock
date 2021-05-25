@@ -34,6 +34,7 @@ test:
     - fib.pyx      # needed by run_test.py
   source_files:
     - runtests.py  # from repo
+    - tests/       # needed by runtests.py
   commands:
     - cython --version
     - python -vv runtests.py
