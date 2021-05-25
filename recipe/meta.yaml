@@ -29,10 +29,14 @@ requirements:
     - python
 
 test:
+  # this section automatically executes run_test.py (from recipe)
+  files:
+    - fib.pyx      # needed by run_test.py
+  source_files:
+    - runtests.py  # from repo
   commands:
     - cython --version
-  files:
-    - fib.pyx
+    - python -vv -x Debugger runtests.py
 
 about:
   home: http://www.cython.org/
