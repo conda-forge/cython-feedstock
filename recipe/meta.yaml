@@ -37,6 +37,9 @@ test:
     # files below needed by runtests.py
     - tests/
     - Cython/Runtime/refnanny.pyx
+  requires:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   commands:
     - cython --version
     - python -v runtests.py
