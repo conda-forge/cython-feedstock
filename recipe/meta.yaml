@@ -35,6 +35,7 @@ test:
   source_files:
     - runtests.py  # from repo
     # files below needed by runtests.py
+    - cython.py
     - tests/
     - Cython/Runtime/refnanny.pyx
     - Demos/embed
@@ -42,9 +43,10 @@ test:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - numpy
+    - setuptools
   commands:
     - cython --version
-    - python -v runtests.py
+    - python -vv runtests.py
 
 about:
   home: http://www.cython.org/
