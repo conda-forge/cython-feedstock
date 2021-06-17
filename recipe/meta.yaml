@@ -7,9 +7,12 @@ package:
 source:
   url: https://pypi.io/packages/source/C/Cython/Cython-{{ version }}.tar.gz
   sha256: 6a0d31452f0245daacb14c979c77e093eb1a546c760816b5eed0047686baad8e
+  patches:
+    # part of next release
+    - patches/pypy37-eval.patch
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - cython = Cython.Compiler.Main:setuptools_main
