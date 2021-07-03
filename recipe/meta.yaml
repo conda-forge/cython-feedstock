@@ -47,8 +47,8 @@ test:
   commands:
     - cython --version
     # prevent the C compiler from doing anything fancy that takes more time than the test run afterwards
-    - export CFLAGS="$CFLAGS -O0"  # [unix]
-    - set "CFLAGS=%CFLAGS% -O0"    # [win]
+    - export CFLAGS="$CFLAGS -Og"  # [unix]
+    - set "CFLAGS=%CFLAGS% -Og"    # [win]
     - python runtests.py -j7
 
 about:
