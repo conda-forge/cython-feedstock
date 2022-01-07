@@ -42,8 +42,9 @@ test:
   requires:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - numpy
     - setuptools
+    - numpy
+    - pythran
   commands:
     - cython --version
     # prevent the C compiler from doing anything fancy that takes more time than the test run afterwards
