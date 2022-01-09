@@ -45,7 +45,7 @@ test:
     - setuptools
     - numpy
     - pythran
-    - tbb  # [linux]
+    - tbb-devel  # [linux]
   commands:
     - cython --version
     # prevent the C compiler from doing anything fancy that takes more time than the test run afterwards
