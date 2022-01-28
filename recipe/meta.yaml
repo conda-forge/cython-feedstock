@@ -1,4 +1,4 @@
-{% set version = "0.29.26" %}
+{% set version = "0.29.27" %}
 
 package:
   name: cython
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/C/Cython/Cython-{{ version }}.tar.gz
-  sha256: af377d543a762867da11fcf6e558f7a4a535ff8693f30cce123fab10c00fa312
+  sha256: c6a442504db906dfc13a480e96850cced994ecdc076bcf492c43515b78f70da2
   patches:
     # xref: https://github.com/cython/cython/pull/4236
     - patches/pypy37-eval.patch
