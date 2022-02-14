@@ -7,9 +7,6 @@ package:
 source:
   url: https://pypi.io/packages/source/C/Cython/Cython-{{ version }}.tar.gz
   sha256: 342e95121a3d1a67cbcf7b340391eb40cc5ce3d2a79d7873e005e8783353d89d
-  patches:
-    # xref: https://github.com/cython/cython/pull/4236
-    - patches/pypy37-eval.patch
 
 build:
   number: 0
