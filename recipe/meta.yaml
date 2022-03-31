@@ -10,9 +10,7 @@ source:
 
 build:
   number: 2
-  script:
-    - ls "${PREFIX}/bin"  # [unix]
-    - {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - cython = Cython.Compiler.Main:setuptools_main
     - cythonize = Cython.Build.Cythonize:main
