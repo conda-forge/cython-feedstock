@@ -11,7 +11,7 @@ Summary: The Cython compiler for writing C extensions for the Python language
 
 Development: https://github.com/cython/cython
 
-Documentation: http://cython.org/#documentation
+Documentation: https://docs.cython.org
 
 Cython is an optimising static compiler for both the Python programming
 language and the extended Cython programming language. It makes writing C
