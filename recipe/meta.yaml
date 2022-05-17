@@ -43,7 +43,7 @@ test:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - setuptools
-    - numpy
+    - numpy *
     - pythran
     # Recent TBB releases have deprecated and removed (in 2021.1.1) several
     # APIs which were used in GCC 9.4.0's C++17 parallel STL implementation;
