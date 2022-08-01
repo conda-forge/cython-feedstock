@@ -50,10 +50,9 @@ test:
   commands:
     - cython --version
     # prevent the C compiler from doing anything fancy that takes more time than the test run afterwards
-    - export CFLAGS="$CFLAGS -Og"       # [unix]
-    - set "CFLAGS=%CFLAGS% -Og"         # [win]
-    - python runtests.py -j$CPU_COUNT   # [unix]
-    - python runtests.py -j%CPU_COUNT%  # [win]
+    - export CFLAGS="$CFLAGS -Og"  # [unix]
+    - set "CFLAGS=%CFLAGS% -Og"    # [win]
+    - python runtests.py
 
 about:
   home: http://www.cython.org/
