@@ -1,15 +1,15 @@
-{% set version = "3.0.0a11" %}
+{% set version = "3.0.0b1" %}
 
 package:
   name: cython
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/C/Cython/Cython-{{ version }}.tar.gz
-  sha256: e4672491fb31546b9abb63677f638e738085dc9321398170956ef6fbfc0e1726
+  url: https://github.com/cython/cython/releases/download/{{ version }}/Cython-{{ version }}.tar.gz
+  sha256: 30c7d7050bc0d58cbfb422a2fe16615d962a537409fd0588277add29f271c897
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - cython = Cython.Compiler.Main:setuptools_main
