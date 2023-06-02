@@ -26,8 +26,6 @@ python:
 - 3.8.* *_73_pypy
 target_platform:
 - linux-aarch64
-tbb_devel:
-- '2021'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
