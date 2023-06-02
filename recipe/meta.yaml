@@ -39,6 +39,7 @@ test:
     - tests/
     - Cython/Runtime/refnanny.pyx
     - Demos/embed
+    - docs/examples
   requires:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
