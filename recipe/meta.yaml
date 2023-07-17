@@ -1,4 +1,4 @@
-{% set version = "0.29.36" %}
+{% set version = "3.0.0" %}
 
 package:
   name: cython
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/cython/cython/archive/refs/tags/{{ version }}.tar.gz
-  sha256: bd8ee4208e1f2817914894eca8c4ca894f6c9a51803b0b815a9a3c03d01ab729
+  sha256: 1acaf0abe3edfad06cc98b4ab2499b20714a6fe11c4ef1afb4751f2a8e9208af
 
 build:
   number: 0
