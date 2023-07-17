@@ -409,4 +409,5 @@ Feedstock Maintainers
 * [@ocefpaf](https://github.com/ocefpaf/)
 * [@scopatz](https://github.com/scopatz/)
 * [@synapticarbors](https://github.com/synapticarbors/)
+* [@tlambert03](https://github.com/tlambert03/)
 
