@@ -26,21 +26,25 @@ print('sys.version: %r' % sys.version)
 print('PATH: %r' % os.environ['PATH'])
 print('CWD: %r' % os.getcwd())
 
-from distutils.spawn import find_executable
+
+from Cython.Build import cythonize
+
+cythonize("fib_cythonize_*.pyx", nthreads=2)
+
+
 from distutils.core import setup
 from distutils.extension import Extension
 from Cython.Distutils import build_ext
 
-if find_executable('gcc'):
-    sys.argv[1:] = ['build_ext', '--inplace']
-    setup(name='fib',
-          cmdclass={'build_ext': build_ext},
-          ext_modules=[Extension("fib", ["fib.pyx"])])
+sys.argv[1:] = ['build_ext', '--inplace']
+setup(name='fib',
+      cmdclass={'build_ext': build_ext},
+      ext_modules=[Extension("fib", ["fib.pyx"])])
 
-    try:
-        import fib
-        assert fib.fib(10) == 55
-    except ImportError:
-        cmd = [sys.executable, '-c', 'import fib; print(fib.fib(10))']
-        out = subprocess.check_output(cmd)
-        assert out.decode('utf-8').strip() == '55'
+try:
+    import fib
+    assert fib.fib(10) == 55
+except ImportError:
+    cmd = [sys.executable, '-c', 'import fib; print(fib.fib(10))']
+    out = subprocess.check_output(cmd)
+    assert out.decode('utf-8').strip() == '55'
