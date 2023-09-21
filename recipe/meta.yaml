@@ -29,6 +29,8 @@ requirements:
     - python
 
 test:
+  requires:
+    - setuptools  # [py>=312]
   commands:
     - cython --version
   files:
