@@ -29,7 +29,11 @@ requirements:
     - python
 
 test:
+  requires:
+    - pip
+    - setuptools
   commands:
+    - pip check
     - cython --version
   files:
     - fib.pyx

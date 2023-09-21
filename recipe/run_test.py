@@ -14,6 +14,7 @@ import Cython.Plex.Scanners
 if is_cpython:
     import Cython.Runtime.refnanny
 
+import shutil
 import sys
 import os
 import subprocess
@@ -26,12 +27,10 @@ print('sys.version: %r' % sys.version)
 print('PATH: %r' % os.environ['PATH'])
 print('CWD: %r' % os.getcwd())
 
-from distutils.spawn import find_executable
-from distutils.core import setup
-from distutils.extension import Extension
+from setuptools import setup, Extension
 from Cython.Distutils import build_ext
 
-if find_executable('gcc'):
+if shutil.which('gcc'):
     sys.argv[1:] = ['build_ext', '--inplace']
     setup(name='fib',
           cmdclass={'build_ext': build_ext},
