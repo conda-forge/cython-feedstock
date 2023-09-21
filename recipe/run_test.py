@@ -30,7 +30,7 @@ from shutils import which
 from setuptools import setup, Extension
 from Cython.Build import build_ext
 
-if find_executable('gcc'):
+if which('gcc'):
     sys.argv[1:] = ['build_ext', '--inplace']
     setup(name='fib',
           cmdclass={'build_ext': build_ext},
