@@ -26,10 +26,9 @@ print('sys.version: %r' % sys.version)
 print('PATH: %r' % os.environ['PATH'])
 print('CWD: %r' % os.getcwd())
 
-from distutils.spawn import find_executable
-from distutils.core import setup
-from distutils.extension import Extension
-from Cython.Distutils import build_ext
+from shutils import which
+from setuptools import setup, Extension
+from Cython.Build import build_ext
 
 if find_executable('gcc'):
     sys.argv[1:] = ['build_ext', '--inplace']
