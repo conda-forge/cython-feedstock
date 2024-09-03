@@ -4,8 +4,7 @@ bot:
   - 0.29.x
   version_updates:
     exclude:
-    # xref: https://github.com/conda-forge/cython-feedstock/issues/141
-    - "3.0.11-1"
+    - 3.0.11-1
 build_platform:
   linux_aarch64: linux_64
   linux_ppc64le: linux_64
