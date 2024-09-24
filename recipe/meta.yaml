@@ -18,7 +18,7 @@ build:
   noarch: python   # [use_noarch]
   script:
     - {{ PYTHON }} -m pip install . --no-deps -vv                                          # [not use_noarch]
-    - {{ PYTHON }} -m pip install --install-option="--no-cython-compile" . --no-deps -vv   # [use_noarch]
+    - {{ PYTHON }} -m pip install --global-option="--no-cython-compile" . --no-deps -vv    # [use_noarch]
   track_features:
     - cython_no_compile    # [use_noarch]
   entry_points:
