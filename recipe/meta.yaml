@@ -44,7 +44,7 @@ requirements:
 
 test:
   requires:
-    - setuptools  # [py>=312]
+    - setuptools  # [py>=312 or use_noarch]
   commands:
     - cython --version
   files:
