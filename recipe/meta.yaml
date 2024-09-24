@@ -17,8 +17,8 @@ build:
   skip: true       # [use_noarch and not linux64]
   noarch: python   # [use_noarch]
   script:
-    - export NO_CYTHON_COMPILE=1                    # [use_noarch]
-    - {{ PYTHON }} -m pip install . --no-deps -vv
+    - {{ PYTHON }} -m pip install . --no-deps -vv                                          # [not use_noarch]
+    - {{ PYTHON }} -m pip install --install-option="--no-cython-compile" . --no-deps -vv   # [use_noarch]
   track_features:
     - cython_no_compile    # [use_noarch]
   entry_points:
