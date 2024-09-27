@@ -1,0 +1,26 @@
+c_compiler:
+- vs2019
+<<<<<<< HEAD:.ci_support/win_64_python3.9.____cpython.yaml
+=======
+c_stdlib:
+- vs
+>>>>>>> 08ce916a453eeb3bf2932d0a658387c6fe48e413:.ci_support/win_64_python3.9.____cpythonuse_noarchFalse.yaml
+channel_sources:
+- conda-forge
+channel_targets:
+- conda-forge cython_dev
+cxx_compiler:
+- vs2019
+pin_run_as_build:
+  python:
+    min_pin: x.x
+    max_pin: x.x
+python:
+- 3.9.* *_cpython
+target_platform:
+- win-64
+use_noarch:
+- 'False'
+zip_keys:
+- - python
+  - channel_sources

@@ -1,5 +1,6 @@
 import platform
-is_cpython = platform.python_implementation() == 'CPython'
+import os
+is_compiled = (platform.python_implementation() == 'CPython' and os.environ.get("use_noarch", "False") == "False")
 
 import Cython
 import Cython.Compiler.Code
@@ -11,7 +12,7 @@ import Cython.Compiler.Visitor
 import Cython.Plex.Actions
 import Cython.Plex.Scanners
 
-if is_cpython:
+if is_compiled:
     import Cython.Runtime.refnanny
 
 import sys

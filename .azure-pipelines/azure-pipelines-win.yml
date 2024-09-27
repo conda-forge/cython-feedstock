@@ -8,23 +8,36 @@ jobs:
     vmImage: windows-2022
   strategy:
     matrix:
-      win_64_python3.10.____cpython:
-        CONFIG: win_64_python3.10.____cpython
+      win_64_python3.10.____cpythonuse_noarchFalse:
+        CONFIG: win_64_python3.10.____cpythonuse_noarchFalse
         UPLOAD_PACKAGES: 'True'
+<<<<<<< HEAD
       win_64_python3.11.____cpython:
         CONFIG: win_64_python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
       win_64_python3.8.____73_pypy:
         CONFIG: win_64_python3.8.____73_pypy
+=======
+      win_64_python3.11.____cpythonuse_noarchFalse:
+        CONFIG: win_64_python3.11.____cpythonuse_noarchFalse
         UPLOAD_PACKAGES: 'True'
-      win_64_python3.8.____cpython:
-        CONFIG: win_64_python3.8.____cpython
+      win_64_python3.12.____cpythonuse_noarchFalse:
+        CONFIG: win_64_python3.12.____cpythonuse_noarchFalse
+>>>>>>> 08ce916a453eeb3bf2932d0a658387c6fe48e413
         UPLOAD_PACKAGES: 'True'
+      win_64_python3.13.____cp313use_noarchFalse:
+        CONFIG: win_64_python3.13.____cp313use_noarchFalse
+        UPLOAD_PACKAGES: 'True'
+<<<<<<< HEAD
       win_64_python3.9.____73_pypy:
         CONFIG: win_64_python3.9.____73_pypy
         UPLOAD_PACKAGES: 'True'
       win_64_python3.9.____cpython:
         CONFIG: win_64_python3.9.____cpython
+=======
+      win_64_python3.9.____cpythonuse_noarchFalse:
+        CONFIG: win_64_python3.9.____cpythonuse_noarchFalse
+>>>>>>> 08ce916a453eeb3bf2932d0a658387c6fe48e413
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables:
@@ -32,12 +45,17 @@ jobs:
     UPLOAD_TEMP: D:\\tmp
 
   steps:
+<<<<<<< HEAD
+=======
+
+>>>>>>> 08ce916a453eeb3bf2932d0a658387c6fe48e413
     - task: PythonScript@0
       displayName: 'Download Miniforge'
       inputs:
         scriptSource: inline
         script: |
           import urllib.request
+<<<<<<< HEAD
           url = 'https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Windows-x86_64.exe'
           path = r"$(Build.ArtifactStagingDirectory)/Miniforge.exe"
           urllib.request.urlretrieve(url, path)
@@ -98,7 +116,31 @@ jobs:
         upload_package --validate --feedstock-name="%FEEDSTOCK_NAME%" .\ ".\recipe" .ci_support\%CONFIG%.yaml
       displayName: Upload package
       env:
+=======
+          url = 'https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe'
+          path = r"$(Build.ArtifactStagingDirectory)/Miniforge.exe"
+          urllib.request.urlretrieve(url, path)
+
+    - script: |
+        start /wait "" %BUILD_ARTIFACTSTAGINGDIRECTORY%\Miniforge.exe /InstallationType=JustMe /RegisterPython=0 /S /D=C:\Miniforge
+      displayName: Install Miniforge
+
+    - powershell: Write-Host "##vso[task.prependpath]C:\Miniforge\Scripts"
+      displayName: Add conda to PATH
+
+    - script: |
+        call ".scripts\run_win_build.bat"
+      displayName: Run Windows build
+      env:
+        PYTHONUNBUFFERED: 1
+        CONFIG: $(CONFIG)
+        CI: azure
+        flow_run_id: azure_$(Build.BuildNumber).$(System.JobAttempt)
+        remote_url: $(Build.Repository.Uri)
+        sha: $(Build.SourceVersion)
+        UPLOAD_PACKAGES: $(UPLOAD_PACKAGES)
+        UPLOAD_TEMP: $(UPLOAD_TEMP)
+>>>>>>> 08ce916a453eeb3bf2932d0a658387c6fe48e413
         BINSTAR_TOKEN: $(BINSTAR_TOKEN)
         FEEDSTOCK_TOKEN: $(FEEDSTOCK_TOKEN)
         STAGING_BINSTAR_TOKEN: $(STAGING_BINSTAR_TOKEN)
-      condition: and(succeeded(), not(eq(variables['UPLOAD_PACKAGES'], 'False')), not(eq(variables['Build.Reason'], 'PullRequest')))
