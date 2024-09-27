@@ -1,16 +1,26 @@
-{% set version = "3.0.0rc2" %}
+{% set version = "3.1.0dev0" %}
+{% set build_num = 0 %}
+{% if use_noarch == "True" %}
+{%   set build_num = build_num + 100 %}
+{% endif %}
 
 package:
   name: cython
   version: {{ version }}
 
 source:
-  url: https://github.com/cython/cython/releases/download/{{ version }}/Cython-{{ version }}.tar.gz
-  sha256: 9ed2e47222e553820f6defbe7c5f7cf8b112313c6658000cd76601fc66c930ec
+  url: https://github.com/cython/cython/archive/4de493f66ee5ab27a008aa4816ab79d56bf56901.tar.gz
+  sha256: 8cbfcbe6c3ee25ac5cc0b3ed52c7cf2333cfd6f0c82f2cb28b559a08ac9d462e
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: {{ build_num }}
+  skip: true       # [use_noarch and not linux64]
+  noarch: python   # [use_noarch]
+  script:
+    - export NO_CYTHON_COMPILE=true                   # [use_noarch]
+    - {{ PYTHON }} -m pip install . --no-deps -vv
+  track_features:
+    - cython_no_compile    # [use_noarch]
   entry_points:
     - cython = Cython.Compiler.Main:setuptools_main
     - cythonize = Cython.Build.Cythonize:main
@@ -21,14 +31,20 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
-    - python
+    - python >=3.8  # [use_noarch]
+    - python        # [not use_noarch]
     - pip
+    - setuptools
   run:
-    - python
+    - python >=3.8  # [use_noarch]
+    - python        # [not use_noarch]
 
 test:
+  requires:
+    - setuptools  # [py>=312 or use_noarch]
   commands:
     - cython --version
   files:
@@ -43,7 +59,7 @@ about:
     Cython is an optimising static compiler for both the Python programming
     language and the extended Cython programming language. It makes writing C
     extensions for Python as easy as Python itself.
-  doc_url: http://cython.org/#documentation
+  doc_url: https://docs.cython.org
   dev_url: https://github.com/cython/cython
 
 extra:
@@ -54,4 +70,4 @@ extra:
     - synapticarbors
     - isuruf
     - scopatz
-    - tlambert03
+    - h-vetinari
