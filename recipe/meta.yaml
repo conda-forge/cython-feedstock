@@ -1,4 +1,8 @@
 {% set version = "3.0.11" %}
+{% set build_num = 3 %}
+{% if use_noarch == "True" %}
+{%   set build_num = build_num + 100 %}
+{% endif %}
 
 package:
   name: cython
@@ -9,8 +13,14 @@ source:
   sha256: 2ec7d66d23d6da2328fb24f5c1bec6c63a59ec2e91027766ab904f417e1078aa
 
 build:
-  number: 2
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: {{ build_num }}
+  skip: true       # [use_noarch and not linux64]
+  noarch: python   # [use_noarch]
+  script:
+    - export NO_CYTHON_COMPILE=true                   # [use_noarch]
+    - {{ PYTHON }} -m pip install . --no-deps -vv
+  track_features:
+    - cython_no_compile    # [use_noarch]
   entry_points:
     - cython = Cython.Compiler.Main:setuptools_main
     - cythonize = Cython.Build.Cythonize:main
@@ -24,15 +34,17 @@ requirements:
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
-    - python
+    - python >=3.8  # [use_noarch]
+    - python        # [not use_noarch]
     - pip
     - setuptools
   run:
-    - python
+    - python >=3.8  # [use_noarch]
+    - python        # [not use_noarch]
 
 test:
   requires:
-    - setuptools  # [py>=312]
+    - setuptools  # [py>=312 or use_noarch]
   commands:
     - cython --version
   files:
