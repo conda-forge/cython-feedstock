@@ -9,7 +9,11 @@ c_stdlib_version:
 cdt_name:
 - cos7
 channel_sources:
+- conda-forge
+- conda-forge
+- conda-forge
 - conda-forge/label/python_rc,conda-forge
+- conda-forge
 channel_targets:
 - conda-forge cython_dev
 cxx_compiler:
@@ -23,11 +27,15 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
+- 3.10.* *_cpython
+- 3.11.* *_cpython
+- 3.12.* *_cpython
 - 3.13.* *_cp313
+- 3.9.* *_cpython
 target_platform:
 - linux-64
 use_noarch:
-- 'False'
+- 'True'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
