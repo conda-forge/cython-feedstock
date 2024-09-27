@@ -1,10 +1,7 @@
 c_compiler:
 - vs2019
-<<<<<<< HEAD:.ci_support/win_64_python3.9.____cpython.yaml
-=======
 c_stdlib:
 - vs
->>>>>>> 08ce916a453eeb3bf2932d0a658387c6fe48e413:.ci_support/win_64_python3.9.____cpythonuse_noarchFalse.yaml
 channel_sources:
 - conda-forge
 channel_targets:

@@ -3,15 +3,11 @@ BUILD:
 c_compiler:
 - gcc
 c_compiler_version:
-<<<<<<< HEAD:.ci_support/linux_aarch64_python3.10.____cpython.yaml
-- '12'
-=======
 - '13'
 c_stdlib:
 - sysroot
 c_stdlib_version:
 - '2.17'
->>>>>>> 08ce916a453eeb3bf2932d0a658387c6fe48e413:.ci_support/linux_aarch64_python3.10.____cpythonuse_noarchFalse.yaml
 cdt_arch:
 - aarch64
 cdt_name:
@@ -23,11 +19,7 @@ channel_targets:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-<<<<<<< HEAD:.ci_support/linux_aarch64_python3.10.____cpython.yaml
-- '12'
-=======
 - '13'
->>>>>>> 08ce916a453eeb3bf2932d0a658387c6fe48e413:.ci_support/linux_aarch64_python3.10.____cpythonuse_noarchFalse.yaml
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 pin_run_as_build:

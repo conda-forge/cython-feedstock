@@ -1,10 +1,7 @@
 c_compiler:
 - vs2019
-<<<<<<<< HEAD:.ci_support/win_64_python3.8.____73_pypy.yaml
-========
 c_stdlib:
 - vs
->>>>>>>> 08ce916a453eeb3bf2932d0a658387c6fe48e413:.ci_support/win_64_python3.11.____cpythonuse_noarchFalse.yaml
 channel_sources:
 - conda-forge
 channel_targets:
@@ -16,11 +13,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-<<<<<<<< HEAD:.ci_support/win_64_python3.8.____73_pypy.yaml
-- 3.8.* *_73_pypy
-========
 - 3.11.* *_cpython
->>>>>>>> 08ce916a453eeb3bf2932d0a658387c6fe48e413:.ci_support/win_64_python3.11.____cpythonuse_noarchFalse.yaml
 target_platform:
 - win-64
 use_noarch:

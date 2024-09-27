@@ -5,15 +5,11 @@ MACOSX_SDK_VERSION:
 c_compiler:
 - clang
 c_compiler_version:
-<<<<<<< HEAD:.ci_support/osx_arm64_python3.8.____cpython.yaml
-- '15'
-=======
 - '17'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
 - '11.0'
->>>>>>> 08ce916a453eeb3bf2932d0a658387c6fe48e413:.ci_support/osx_arm64_python3.11.____cpythonuse_noarchFalse.yaml
 channel_sources:
 - conda-forge
 channel_targets:
@@ -21,11 +17,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-<<<<<<< HEAD:.ci_support/osx_arm64_python3.8.____cpython.yaml
-- '15'
-=======
 - '17'
->>>>>>> 08ce916a453eeb3bf2932d0a658387c6fe48e413:.ci_support/osx_arm64_python3.11.____cpythonuse_noarchFalse.yaml
 macos_machine:
 - arm64-apple-darwin20.0.0
 pin_run_as_build:
