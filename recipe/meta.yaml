@@ -34,17 +34,18 @@ requirements:
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
-    - python >=3.8  # [use_noarch]
-    - python        # [not use_noarch]
+    - python {{ python_min }}.*     # [use_noarch]
+    - python                        # [not use_noarch]
     - pip
     - setuptools
   run:
-    - python >=3.8  # [use_noarch]
-    - python        # [not use_noarch]
+    - python >={{ python_min }}     # [use_noarch]
+    - python                        # [not use_noarch]
 
 test:
   requires:
-    - setuptools  # [py>=312 or use_noarch]
+    - setuptools                    # [use_noarch or py>=312]
+    - python {{ python_min }}       # [use_noarch]
   commands:
     - cython --version
   files:
