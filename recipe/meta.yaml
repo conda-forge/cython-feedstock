@@ -3,6 +3,10 @@
 {% if use_noarch == "True" %}
 {%   set build_num = build_num + 100 %}
 {% endif %}
+# linter doesn't know the values from the variants
+{% if python_min is undefined %}
+{% set python_min = "3.9" %}
+{% endif %}
 
 package:
   name: cython
@@ -14,9 +18,13 @@ source:
 
 build:
   number: {{ build_num }}
-  # only build noarch packages on linux64 and python_min
-  skip: true       # [use_noarch and not (linux64 and py==39)]
   noarch: python   # [use_noarch]
+  # only build noarch packages on linux64...
+  skip: true       # [use_noarch and not linux64]
+  # ... and using python_min
+  {% if py|string != python_min.replace(".", "") %}
+  skip: true       # [use_noarch]
+  {% endif %}
   script:
     - export NO_CYTHON_COMPILE=true                   # [use_noarch]
     - {{ PYTHON }} -m pip install . --no-deps -vv
