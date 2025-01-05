@@ -1,3 +1,5 @@
+ace:
+- 8.0.2
 c_compiler:
 - gcc
 c_compiler_version:
@@ -24,6 +26,8 @@ pin_run_as_build:
     max_pin: x.x
 python:
 - 3.13.* *_cp313
+python_min:
+- '3.9'
 target_platform:
 - linux-aarch64
 use_noarch:
