@@ -1,7 +1,6 @@
 bot:
   abi_migration_branches:
   - dev
-  - 0.29.x
   version_updates:
     exclude:
     - 3.0.11-1
