@@ -1,9 +1,6 @@
 bot:
   abi_migration_branches:
   - dev
-  version_updates:
-    exclude:
-    - 3.0.11-1
 build_platform:
   linux_aarch64: linux_64
   linux_ppc64le: linux_64
@@ -14,7 +11,7 @@ conda_forge_output_validation: true
 github:
   branch_name: main
   tooling_branch_name: main
-provider:
-  linux_aarch64: default
-  linux_ppc64le: default
+linter:
+  skip:
+    - lint_noarch_selectors
 test: native_and_emulated
