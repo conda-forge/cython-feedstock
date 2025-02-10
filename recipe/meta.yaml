@@ -15,6 +15,7 @@ source:
 build:
   number: {{ build_num }}
   skip: true       # [use_noarch and not linux64]
+  skip: true       # [use_noarch and not is_python_min]
   noarch: python   # [use_noarch]
   script:
     - export NO_CYTHON_COMPILE=true                   # [use_noarch]
