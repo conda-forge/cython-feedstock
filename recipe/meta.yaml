@@ -42,6 +42,7 @@ requirements:
   run:
     - python >={{ python_min }}  # [use_noarch]
     - python                     # [not use_noarch]
+    - setuptools
 
 test:
   requires:
