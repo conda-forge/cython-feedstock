@@ -13,8 +13,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/f5/6a/b820fd8626fa6a658880815dc99dea8318438dabee96d75e261d050d94d8/cython-3.1.0b1.tar.gz
-  sha256: 3bfddd63e8e46eeeddc8283f47c4a16a2e98263ca9f9b215fe6ddbb69a9a185f
+  url: https://github.com/cython/cython/archive/refs/tags/{{ version }}.tar.gz
+  sha256: d21d580eec0906421d5568ed17e7b89f7dfe67435c94affb46fd43fbc4f624f2
 
 build:
   number: {{ build_num }}
