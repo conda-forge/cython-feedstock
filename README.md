@@ -238,6 +238,41 @@ Current build status
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cython-feedstock?branchName=main&jobName=win&configuration=win%20win_64_is_python_mintruepython3.9.____cpythonuse_noarchFalse" alt="variant">
                 </a>
               </td>
+            </tr><tr>
+              <td>win_arm64_is_python_minfalsepython3.10.____cpythonuse_noarchFalse</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=216&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cython-feedstock?branchName=main&jobName=win&configuration=win%20win_arm64_is_python_minfalsepython3.10.____cpythonuse_noarchFalse" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_arm64_is_python_minfalsepython3.11.____cpythonuse_noarchFalse</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=216&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cython-feedstock?branchName=main&jobName=win&configuration=win%20win_arm64_is_python_minfalsepython3.11.____cpythonuse_noarchFalse" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_arm64_is_python_minfalsepython3.12.____cpythonuse_noarchFalse</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=216&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cython-feedstock?branchName=main&jobName=win&configuration=win%20win_arm64_is_python_minfalsepython3.12.____cpythonuse_noarchFalse" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_arm64_is_python_minfalsepython3.13.____cp313use_noarchFalse</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=216&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cython-feedstock?branchName=main&jobName=win&configuration=win%20win_arm64_is_python_minfalsepython3.13.____cp313use_noarchFalse" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_arm64_is_python_mintruepython3.9.____cpythonuse_noarchFalse</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=216&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cython-feedstock?branchName=main&jobName=win&configuration=win%20win_arm64_is_python_mintruepython3.9.____cpythonuse_noarchFalse" alt="variant">
+                </a>
+              </td>
             </tr>
           </tbody>
         </table>
