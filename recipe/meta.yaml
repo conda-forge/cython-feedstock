@@ -1,4 +1,4 @@
-{% set version = "3.1.0rc1" %}
+{% set version = "3.1.0rc2" %}
 {% set build_num = 0 %}
 {% if use_noarch == "True" %}
 {%   set build_num = build_num + 100 %}
@@ -14,7 +14,7 @@ package:
 
 source:
   url: https://github.com/cython/cython/archive/refs/tags/{{ version }}.tar.gz
-  sha256: c5f09a25a9cbfbe57a8320ee26c3729327cf7a04b44c81b1567031950aa39e08
+  sha256: f87ecc9d8d2497cf7adc4ff1b22371169f02682d87985e6e833c6a04bcaa3d11
 
 build:
   number: {{ build_num }}
