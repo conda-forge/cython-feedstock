@@ -8,44 +8,20 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_is_python_minfalsepython3.10.____cpythonuse_noarchFalse:
-        CONFIG: linux_64_is_python_minfalsepython3.10.____cpythonuse_noarchFalse
+      linux_64_is_python_minfalseuse_noarchFalse:
+        CONFIG: linux_64_is_python_minfalseuse_noarchFalse
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_is_python_minfalsepython3.10.____cpythonuse_noarchTrue:
-        CONFIG: linux_64_is_python_minfalsepython3.10.____cpythonuse_noarchTrue
+      linux_64_is_python_minfalseuse_noarchTrue:
+        CONFIG: linux_64_is_python_minfalseuse_noarchTrue
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_is_python_minfalsepython3.11.____cpythonuse_noarchFalse:
-        CONFIG: linux_64_is_python_minfalsepython3.11.____cpythonuse_noarchFalse
+      linux_64_is_python_mintrueuse_noarchFalse:
+        CONFIG: linux_64_is_python_mintrueuse_noarchFalse
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_is_python_minfalsepython3.11.____cpythonuse_noarchTrue:
-        CONFIG: linux_64_is_python_minfalsepython3.11.____cpythonuse_noarchTrue
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_is_python_minfalsepython3.12.____cpythonuse_noarchFalse:
-        CONFIG: linux_64_is_python_minfalsepython3.12.____cpythonuse_noarchFalse
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_is_python_minfalsepython3.12.____cpythonuse_noarchTrue:
-        CONFIG: linux_64_is_python_minfalsepython3.12.____cpythonuse_noarchTrue
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_is_python_minfalsepython3.13.____cp313use_noarchFalse:
-        CONFIG: linux_64_is_python_minfalsepython3.13.____cp313use_noarchFalse
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_is_python_minfalsepython3.13.____cp313use_noarchTrue:
-        CONFIG: linux_64_is_python_minfalsepython3.13.____cp313use_noarchTrue
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_is_python_mintruepython3.9.____cpythonuse_noarchFalse:
-        CONFIG: linux_64_is_python_mintruepython3.9.____cpythonuse_noarchFalse
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_is_python_mintruepython3.9.____cpythonuse_noarchTrue:
-        CONFIG: linux_64_is_python_mintruepython3.9.____cpythonuse_noarchTrue
+      linux_64_is_python_mintrueuse_noarchTrue:
+        CONFIG: linux_64_is_python_mintrueuse_noarchTrue
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
       linux_aarch64_is_python_minfalsepython3.10.____cpythonuse_noarchFalse:
