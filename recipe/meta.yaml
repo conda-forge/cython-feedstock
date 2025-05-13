@@ -49,7 +49,7 @@ test:
     # this unpinned to allow cython to be used in the downstream tests
     # of the python-feedstock.
     # See also https://github.com/conda-forge/conda-forge.github.io/pull/2387
-    - python                     # [use_noarch]
+    - python *                   # [use_noarch]
     - setuptools                 # [py>=312 or use_noarch]
   commands:
     - cython --version
