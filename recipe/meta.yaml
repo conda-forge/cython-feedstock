@@ -1,5 +1,5 @@
 {% set version = "3.1.0" %}
-{% set build_num = 0 %}
+{% set build_num = 1 %}
 {% if use_noarch == "True" %}
 {%   set build_num = build_num + 100 %}
 {% endif %}
@@ -45,7 +45,11 @@ requirements:
 
 test:
   requires:
-    - python {{ python_min }}    # [use_noarch]
+    # The linter will complain about the missing python_min, but we need
+    # this unpinned to allow cython to be used in the downstream tests
+    # of the python-feedstock.
+    # See also https://github.com/conda-forge/conda-forge.github.io/pull/2387
+    - python                     # [use_noarch]
     - setuptools                 # [py>=312 or use_noarch]
   commands:
     - cython --version
