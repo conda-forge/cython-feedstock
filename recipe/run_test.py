@@ -35,7 +35,6 @@ print('sys.version: %r' % sys.version)
 print('PATH: %r' % os.environ['PATH'])
 print('CWD: %r' % os.getcwd())
 
-import setuptools
 from distutils.spawn import find_executable
 from distutils.core import setup
 from distutils.extension import Extension
