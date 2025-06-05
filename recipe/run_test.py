@@ -1,6 +1,10 @@
 import platform
 import os
-is_compiled = (platform.python_implementation() == 'CPython' and os.environ.get("use_noarch", "False") == "False")
+
+is_freethreading = bool(sysconfig.get_config_var("Py_GIL_DISABLED"))
+is_cpython = platform.python_implementation() == 'CPython'
+use_noarch = os.environ.get("use_noarch", "False") == "False"
+is_compiled = is_cpython and not use_noarch and not is_freethreading
 
 import Cython
 import Cython.Compiler.Code
