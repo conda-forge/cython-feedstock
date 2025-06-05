@@ -4,8 +4,8 @@ import sysconfig
 
 is_freethreading = bool(sysconfig.get_config_var("Py_GIL_DISABLED"))
 is_cpython = platform.python_implementation() == 'CPython'
-use_noarch = os.environ.get("use_noarch", "False") == "False"
-is_compiled = is_cpython and not use_noarch and not is_freethreading
+is_arch = os.environ.get("use_noarch", "False") == "False"
+is_compiled = is_cpython and is_arch and not is_freethreading
 
 import Cython
 import Cython.Compiler.Code
@@ -17,8 +17,11 @@ import Cython.Compiler.Visitor
 import Cython.Plex.Actions
 import Cython.Plex.Scanners
 
-if is_compiled:
+try:
     import Cython.Runtime.refnanny
+    assert is_compiled
+except ImportError:
+    assert not is_compiled
 
 import sys
 import os
