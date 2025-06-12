@@ -49,7 +49,7 @@ test:
     # of the python-feedstock.
     # See also https://github.com/conda-forge/conda-forge.github.io/pull/2387
     # - python {{ python_min }}    # [use_noarch]
-    - setuptools                 # [py>=312 or use_noarch]
+    - setuptools
   commands:
     - cython --version
   files:
