@@ -1,5 +1,7 @@
 import platform
 import os
+import sysconfig
+
 is_freethreading = bool(sysconfig.get_config_var("Py_GIL_DISABLED"))
 is_cpython = platform.python_implementation() == 'CPython'
 is_arch = os.environ.get("use_noarch", "False") == "False"
