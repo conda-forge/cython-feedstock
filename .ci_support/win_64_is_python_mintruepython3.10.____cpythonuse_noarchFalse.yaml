@@ -9,7 +9,7 @@ channel_targets:
 cxx_compiler:
 - vs2022
 is_python_min:
-- false
+- true
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -17,7 +17,7 @@ pin_run_as_build:
 python:
 - 3.10.* *_cpython
 python_min:
-- '3.9'
+- '3.10'
 target_platform:
 - win-64
 use_noarch:
