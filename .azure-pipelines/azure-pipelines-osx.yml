@@ -17,6 +17,12 @@ jobs:
       osx_64_is_python_minfalsepython3.13.____cp313use_noarchFalse:
         CONFIG: osx_64_is_python_minfalsepython3.13.____cp313use_noarchFalse
         UPLOAD_PACKAGES: 'True'
+      osx_64_is_python_minfalsepython3.14.____cp314tuse_noarchFalse:
+        CONFIG: osx_64_is_python_minfalsepython3.14.____cp314tuse_noarchFalse
+        UPLOAD_PACKAGES: 'True'
+      osx_64_is_python_minfalsepython3.14.____cp314use_noarchFalse:
+        CONFIG: osx_64_is_python_minfalsepython3.14.____cp314use_noarchFalse
+        UPLOAD_PACKAGES: 'True'
       osx_64_is_python_mintruepython3.10.____cpythonuse_noarchFalse:
         CONFIG: osx_64_is_python_mintruepython3.10.____cpythonuse_noarchFalse
         UPLOAD_PACKAGES: 'True'
@@ -28,6 +34,12 @@ jobs:
         UPLOAD_PACKAGES: 'True'
       osx_arm64_is_python_minfalsepython3.13.____cp313use_noarchFalse:
         CONFIG: osx_arm64_is_python_minfalsepython3.13.____cp313use_noarchFalse
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_is_python_minfalsepython3.14.____cp314tuse_noarchFalse:
+        CONFIG: osx_arm64_is_python_minfalsepython3.14.____cp314tuse_noarchFalse
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_is_python_minfalsepython3.14.____cp314use_noarchFalse:
+        CONFIG: osx_arm64_is_python_minfalsepython3.14.____cp314use_noarchFalse
         UPLOAD_PACKAGES: 'True'
       osx_arm64_is_python_mintruepython3.10.____cpythonuse_noarchFalse:
         CONFIG: osx_arm64_is_python_mintruepython3.10.____cpythonuse_noarchFalse
