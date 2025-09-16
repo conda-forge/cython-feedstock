@@ -5,12 +5,9 @@
 jobs:
 - job: osx
   pool:
-    vmImage: macOS-13
+    vmImage: macOS-15
   strategy:
     matrix:
-      osx_64_is_python_minfalsepython3.10.____cpythonuse_noarchFalse:
-        CONFIG: osx_64_is_python_minfalsepython3.10.____cpythonuse_noarchFalse
-        UPLOAD_PACKAGES: 'True'
       osx_64_is_python_minfalsepython3.11.____cpythonuse_noarchFalse:
         CONFIG: osx_64_is_python_minfalsepython3.11.____cpythonuse_noarchFalse
         UPLOAD_PACKAGES: 'True'
@@ -20,11 +17,8 @@ jobs:
       osx_64_is_python_minfalsepython3.13.____cp313use_noarchFalse:
         CONFIG: osx_64_is_python_minfalsepython3.13.____cp313use_noarchFalse
         UPLOAD_PACKAGES: 'True'
-      osx_64_is_python_mintruepython3.9.____cpythonuse_noarchFalse:
-        CONFIG: osx_64_is_python_mintruepython3.9.____cpythonuse_noarchFalse
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_is_python_minfalsepython3.10.____cpythonuse_noarchFalse:
-        CONFIG: osx_arm64_is_python_minfalsepython3.10.____cpythonuse_noarchFalse
+      osx_64_is_python_mintruepython3.10.____cpythonuse_noarchFalse:
+        CONFIG: osx_64_is_python_mintruepython3.10.____cpythonuse_noarchFalse
         UPLOAD_PACKAGES: 'True'
       osx_arm64_is_python_minfalsepython3.11.____cpythonuse_noarchFalse:
         CONFIG: osx_arm64_is_python_minfalsepython3.11.____cpythonuse_noarchFalse
@@ -35,8 +29,8 @@ jobs:
       osx_arm64_is_python_minfalsepython3.13.____cp313use_noarchFalse:
         CONFIG: osx_arm64_is_python_minfalsepython3.13.____cp313use_noarchFalse
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_is_python_mintruepython3.9.____cpythonuse_noarchFalse:
-        CONFIG: osx_arm64_is_python_mintruepython3.9.____cpythonuse_noarchFalse
+      osx_arm64_is_python_mintruepython3.10.____cpythonuse_noarchFalse:
+        CONFIG: osx_arm64_is_python_mintruepython3.10.____cpythonuse_noarchFalse
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables: {}
