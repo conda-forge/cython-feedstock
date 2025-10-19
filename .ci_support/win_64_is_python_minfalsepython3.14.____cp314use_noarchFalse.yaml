@@ -3,7 +3,7 @@ c_compiler:
 c_stdlib:
 - vs
 channel_sources:
-- conda-forge,conda-forge/label/python_rc
+- conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
@@ -25,4 +25,3 @@ use_noarch:
 zip_keys:
 - - python
   - is_python_min
-  - channel_sources
