@@ -1,11 +1,7 @@
-{% set version = "3.1.0rc2" %}
-{% set build_num = 0 %}
+{% set version = "3.1.5" %}
+{% set build_number = 0 %}
 {% if use_noarch == "True" %}
-{%   set build_num = build_num + 100 %}
-{% endif %}
-# linter doesn't know the values from the variants
-{% if python_min is undefined %}
-{% set python_min = "3.9" %}
+{%   set build_num = build_number + 100 %}
 {% endif %}
 
 package:
@@ -14,17 +10,13 @@ package:
 
 source:
   url: https://github.com/cython/cython/archive/refs/tags/{{ version }}.tar.gz
-  sha256: f87ecc9d8d2497cf7adc4ff1b22371169f02682d87985e6e833c6a04bcaa3d11
+  sha256: 25442cae26b7ca78059d21526c1141a5bce8a19bd51f96f36939bbc2a68af16b
 
 build:
-  number: {{ build_num }}
-  noarch: python   # [use_noarch]
-  # only build noarch packages on linux64...
-  skip: true       # [use_noarch and not linux64]
-  # ... and using python_min
-  {% if py|string != python_min.replace(".", "") %}
-  skip: true       # [use_noarch]
-  {% endif %}
+  number: {{ build_number }}
+  skip: true  # [use_noarch and not linux64]
+  skip: true  # [use_noarch and not is_python_min]
+  noarch: python  # [use_noarch]
   script:
     - export NO_CYTHON_COMPILE=true                   # [use_noarch]
     - {{ PYTHON }} -m pip install . --no-deps -vv
@@ -43,18 +35,21 @@ requirements:
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
-    - python {{ python_min }}.*     # [use_noarch]
-    - python                        # [not use_noarch]
+    - python {{ python_min }}    # [use_noarch]
+    - python                     # [not use_noarch]
     - pip
     - setuptools
   run:
-    - python >={{ python_min }}     # [use_noarch]
-    - python                        # [not use_noarch]
+    - python >={{ python_min }}  # [use_noarch]
+    - python                     # [not use_noarch]
 
 test:
   requires:
-    - setuptools                    # [use_noarch or py>=312]
-    - python {{ python_min }}       # [use_noarch]
+    # Avoid pin to python_min to allow cython to be used in the downstream tests
+    # of the python-feedstock.
+    # See also https://github.com/conda-forge/conda-forge.github.io/pull/2387
+    # - python {{ python_min }}    # [use_noarch]
+    - setuptools
   commands:
     - cython --version
   files:
