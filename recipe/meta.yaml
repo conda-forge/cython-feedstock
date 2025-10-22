@@ -37,6 +37,7 @@ requirements:
   host:
     - python {{ python_min }}    # [use_noarch]
     - python                     # [not use_noarch]
+    - python_abi                 # [not use_noarch]
     - pip
     - setuptools
   run:
