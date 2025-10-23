@@ -16,6 +16,8 @@ cxx_compiler_version:
 - '14'
 docker_image:
 - quay.io/condaforge/linux-anvil-x86_64:alma9
+is_freethreading:
+- false
 is_python_min:
 - false
 pin_run_as_build:
@@ -23,11 +25,11 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.13.* *_cp313
+- 3.11.* *_cpython
 python_min:
 - '3.10'
 target_platform:
-- linux-aarch64
+- linux-ppc64le
 use_noarch:
 - 'False'
 zip_keys:
@@ -35,3 +37,4 @@ zip_keys:
   - cxx_compiler_version
 - - python
   - is_python_min
+  - is_freethreading

@@ -8,23 +8,23 @@ jobs:
     vmImage: windows-2022
   strategy:
     matrix:
-      win_64_is_python_minfalsepython3.11.____cpythonuse_noarchFalse:
-        CONFIG: win_64_is_python_minfalsepython3.11.____cpythonuse_noarchFalse
+      win_64_is_freethreadingfalseis_python_minfalsepython3.11.____cpythonuse_noarchFalse:
+        CONFIG: win_64_is_freethreadingfalseis_python_minfalsepython3.11.____cpythonuse_noarchFalse
         UPLOAD_PACKAGES: 'True'
-      win_64_is_python_minfalsepython3.12.____cpythonuse_noarchFalse:
-        CONFIG: win_64_is_python_minfalsepython3.12.____cpythonuse_noarchFalse
+      win_64_is_freethreadingfalseis_python_minfalsepython3.12.____cpythonuse_noarchFalse:
+        CONFIG: win_64_is_freethreadingfalseis_python_minfalsepython3.12.____cpythonuse_noarchFalse
         UPLOAD_PACKAGES: 'True'
-      win_64_is_python_minfalsepython3.13.____cp313use_noarchFalse:
-        CONFIG: win_64_is_python_minfalsepython3.13.____cp313use_noarchFalse
+      win_64_is_freethreadingfalseis_python_minfalsepython3.13.____cp313use_noarchFalse:
+        CONFIG: win_64_is_freethreadingfalseis_python_minfalsepython3.13.____cp313use_noarchFalse
         UPLOAD_PACKAGES: 'True'
-      win_64_is_python_minfalsepython3.14.____cp314tuse_noarchFalse:
-        CONFIG: win_64_is_python_minfalsepython3.14.____cp314tuse_noarchFalse
+      win_64_is_freethreadingfalseis_python_minfalsepython3.14.____cp314use_noarchFalse:
+        CONFIG: win_64_is_freethreadingfalseis_python_minfalsepython3.14.____cp314use_noarchFalse
         UPLOAD_PACKAGES: 'True'
-      win_64_is_python_minfalsepython3.14.____cp314use_noarchFalse:
-        CONFIG: win_64_is_python_minfalsepython3.14.____cp314use_noarchFalse
+      win_64_is_freethreadingfalseis_python_mintruepython3.10.____cpythonuse_noarchFalse:
+        CONFIG: win_64_is_freethreadingfalseis_python_mintruepython3.10.____cpythonuse_noarchFalse
         UPLOAD_PACKAGES: 'True'
-      win_64_is_python_mintruepython3.10.____cpythonuse_noarchFalse:
-        CONFIG: win_64_is_python_mintruepython3.10.____cpythonuse_noarchFalse
+      win_64_is_freethreadingtrueis_python_minfalsepython3.14.____cp314tuse_noarchFalse:
+        CONFIG: win_64_is_freethreadingtrueis_python_minfalsepython3.14.____cp314tuse_noarchFalse
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables:
