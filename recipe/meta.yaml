@@ -6,6 +6,7 @@
 
 package:
   name: cython
+  # handle cases like https://github.com/cython/cython/issues/7414
   version: {{ version.split('-')[0] }}
 
 source:
