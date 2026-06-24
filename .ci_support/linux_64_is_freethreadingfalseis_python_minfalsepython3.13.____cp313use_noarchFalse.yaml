@@ -18,26 +18,14 @@ docker_image:
 - quay.io/condaforge/linux-anvil-x86_64:alma9
 is_freethreading:
 - false
-- false
-- false
-- false
-- true
 is_python_min:
-- false
-- false
-- false
-- false
 - false
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.11.* *_cpython
-- 3.12.* *_cpython
 - 3.13.* *_cp313
-- 3.14.* *_cp314
-- 3.14.* *_cp314t
 python_min:
 - '3.10'
 target_platform:
