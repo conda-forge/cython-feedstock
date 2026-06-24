@@ -16,6 +16,12 @@ cxx_compiler_version:
 - '14'
 docker_image:
 - quay.io/condaforge/linux-anvil-x86_64:alma9
+is_freethreading:
+- false
+- false
+- false
+- false
+- true
 is_python_min:
 - false
 - false
@@ -43,3 +49,4 @@ zip_keys:
   - cxx_compiler_version
 - - python
   - is_python_min
+  - is_freethreading
