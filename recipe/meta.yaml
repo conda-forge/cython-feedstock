@@ -18,10 +18,12 @@ build:
   skip: true  # [use_noarch and not linux64]
   skip: true  # [use_noarch and not is_python_min]
   noarch: python  # [use_noarch]
+  force_use_keys:
+    - python
+    - use_noarch
+    - is_freethreading
   script:
     - export NO_CYTHON_COMPILE=true                   # [use_noarch]
-    # ensure we don't mix standard and nogil builds
-    - echo is_freethreading={{ is_freethreading }}    # [not use_noarch]
     - {{ PYTHON }} -m pip install . --no-deps -vv
   track_features:
     - cython_no_compile    # [use_noarch]
@@ -40,7 +42,6 @@ requirements:
   host:
     - python {{ python_min }}    # [use_noarch]
     - python                     # [not use_noarch]
-    - python_abi                 # [not use_noarch]
     - pip
     - setuptools
   run:
