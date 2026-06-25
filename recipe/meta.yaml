@@ -1,5 +1,5 @@
 {% set version = "3.2.6" %}
-{% set build_number = 0 %}
+{% set build_number = 1 %}
 {% if use_noarch == "True" %}
 {%   set build_num = build_number + 100 %}
 {% endif %}
@@ -18,10 +18,12 @@ build:
   skip: true  # [use_noarch and not linux64]
   skip: true  # [use_noarch and not is_python_min]
   noarch: python  # [use_noarch]
+  force_use_keys:
+    - python
+    - use_noarch
+    - is_freethreading
   script:
     - export NO_CYTHON_COMPILE=true                   # [use_noarch]
-    # ensure we don't mix standard and nogil builds
-    - echo is_freethreading={{ is_freethreading }}    # [not use_noarch]
     - {{ PYTHON }} -m pip install . --no-deps -vv
   track_features:
     - cython_no_compile    # [use_noarch]
