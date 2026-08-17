@@ -85,6 +85,48 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_arm64_is_freethreadingfalseis_python_minfalsepython3.11.____cpythonuse_noarchFalse</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=216&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cython-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_is_freethreadingfalseis_python_minfalsepython3.11.____cpythonuse_noarchFalse" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_is_freethreadingfalseis_python_minfalsepython3.12.____cpythonuse_noarchFalse</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=216&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cython-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_is_freethreadingfalseis_python_minfalsepython3.12.____cpythonuse_noarchFalse" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_is_freethreadingfalseis_python_minfalsepython3.13.____cp313use_noarchFalse</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=216&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cython-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_is_freethreadingfalseis_python_minfalsepython3.13.____cp313use_noarchFalse" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_is_freethreadingfalseis_python_minfalsepython3.14.____cp314use_noarchFalse</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=216&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cython-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_is_freethreadingfalseis_python_minfalsepython3.14.____cp314use_noarchFalse" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_is_freethreadingfalseis_python_mintruepython3.10.____cpythonuse_noarchFalse</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=216&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cython-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_is_freethreadingfalseis_python_mintruepython3.10.____cpythonuse_noarchFalse" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_is_freethreadingtrueis_python_minfalsepython3.14.____cp314tuse_noarchFalse</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=216&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cython-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_is_freethreadingtrueis_python_minfalsepython3.14.____cp314tuse_noarchFalse" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>win_64_is_freethreadingfalseis_python_minfalsepython3.11.____cpythonuse_noarchFalse</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=216&branchName=main">
