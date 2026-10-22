@@ -19,7 +19,7 @@ docker_image:
 is_freethreading:
 - false
 is_python_min:
-- false
+- true
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -27,7 +27,7 @@ pin_run_as_build:
 python:
 - 3.11.* *_cpython
 python_min:
-- '3.10'
+- '3.11'
 target_platform:
 - linux-ppc64le
 use_noarch:
