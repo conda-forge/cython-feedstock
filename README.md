@@ -43,13 +43,6 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>osx_64_is_freethreadingfalseis_python_minfalsepython3.11.____cpythonuse_noarchFalse</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=216&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cython-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_is_freethreadingfalseis_python_minfalsepython3.11.____cpythonuse_noarchFalse" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>osx_64_is_freethreadingfalseis_python_minfalsepython3.12.____cpythonuse_noarchFalse</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=216&branchName=main">
@@ -71,10 +64,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_is_freethreadingfalseis_python_mintruepython3.10.____cpythonuse_noarchFalse</td>
+              <td>osx_64_is_freethreadingfalseis_python_mintruepython3.11.____cpythonuse_noarchFalse</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=216&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cython-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_is_freethreadingfalseis_python_mintruepython3.10.____cpythonuse_noarchFalse" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cython-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_is_freethreadingfalseis_python_mintruepython3.11.____cpythonuse_noarchFalse" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -82,13 +75,6 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=216&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cython-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_is_freethreadingtrueis_python_minfalsepython3.14.____cp314tuse_noarchFalse" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_is_freethreadingfalseis_python_minfalsepython3.11.____cpythonuse_noarchFalse</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=216&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cython-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_is_freethreadingfalseis_python_minfalsepython3.11.____cpythonuse_noarchFalse" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -113,10 +99,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_is_freethreadingfalseis_python_mintruepython3.10.____cpythonuse_noarchFalse</td>
+              <td>osx_arm64_is_freethreadingfalseis_python_mintruepython3.11.____cpythonuse_noarchFalse</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=216&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cython-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_is_freethreadingfalseis_python_mintruepython3.10.____cpythonuse_noarchFalse" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cython-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_is_freethreadingfalseis_python_mintruepython3.11.____cpythonuse_noarchFalse" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -233,6 +219,7 @@ mamba repoquery depends cython --channel conda-forge/label/cython_dev
 </details>
 
 
+
 About conda-forge
 =================
 
@@ -247,9 +234,7 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[Azure](https://azure.microsoft.com/en-us/services/devops/), [GitHub](https://github.com/),
-[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
-[Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
+[Azure](https://azure.microsoft.com/en-us/services/devops/) and [GitHub](https://github.com/)
 it is possible to build and upload installable packages to the
 [conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
