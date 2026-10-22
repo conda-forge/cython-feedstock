@@ -5,7 +5,7 @@ c_compiler_version:
 c_stdlib:
 - sysroot
 c_stdlib_version:
-- '2.17'
+- '2.39'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -17,19 +17,19 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-x86_64:alma10
 is_freethreading:
-- false
-is_python_min:
 - true
+is_python_min:
+- false
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.10.* *_cpython
+- 3.14.* *_cp314t
 python_min:
-- '3.10'
+- '3.14'
 target_platform:
-- linux-ppc64le
+- linux-riscv64
 use_noarch:
 - 'False'
 zip_keys:
