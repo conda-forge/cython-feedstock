@@ -11,8 +11,8 @@ github:
   tooling_branch_name: main
 linter:
   skip:
-    - lint_noarch_selectors
-    - hint_python_min
+  - lint_noarch_selectors
+  - hint_python_min
 provider:
   linux_aarch64: default
   osx_arm64: default
