@@ -1,3 +1,5 @@
+DOCKER_PLATFORM:
+- linux/amd64
 c_compiler:
 - gcc
 c_compiler_version:
@@ -25,13 +27,13 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.10.* *_cpython
+- 3.11.* *_cpython
 python_min:
-- '3.10'
+- '3.11'
 target_platform:
 - linux-64
 use_noarch:
-- 'True'
+- 'False'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
